@@ -1,0 +1,79 @@
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Painting with WebGL - Ari</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <script src="webgl-utils.js"></script>
+    <script src="webgl-debug.js"></script>
+    <script src="cuon-utils.js"></script>
+    <script src="paint.js"></script>
+
+    <div><p>
+    </p><input class="clear button"
+       type="button"
+       value="Clear Canvas"
+       onclick="clearCanvas();">
+       
+    </div>
+    <br>
+    <div>
+      Drawing Mode:
+      <br>
+      <input class="squares button"
+       type="button"
+       value="Squares"
+       onclick="setSquare();">
+       
+       <input class="triangles button"
+       type="button"
+       value="Triangles"
+       onclick="setTriangle();">
+
+       <input class="circles button"
+       type="button"
+       value="Circles"
+       onclick="setCircle();">
+      
+    </div>
+
+    <div>
+      <br>
+      Shape Color:
+      <br>
+      Red 
+      <input type="range" id="redslider" name="red" value=0.0 step=0.00392156862
+         min="0.0" max="1.0">
+      <output for="r" id="r_out"></output>
+      Green
+      <input type="range" id="greenslider" name="green" value=0.0 step=0.00392156862
+         min="0" max="1.0">
+         <output for="b" id="b_out"></output>
+      Blue
+      <input type="range" id="blueslider" name="blue" value=0.0 step=0.00392156862
+         min="0" max="1.0">
+         <output for="b" id="b_out"></output>
+      Alpha
+      <input type="range" id="alphaslider" name="blue" value=1.0 step=0.00392156862
+         min="0" max="1.0">
+         <output for="b" id="b_out"></output>
+    </div>
+
+    <div>Shape Size: 
+      <input type="range" id="size" name="shape" step=0.1
+      min="0.1" max="2">
+      (Circles) Segment Count: 
+      <input type="range" id="segments" name="segmentcount" step=1
+      min="3" max="20">
+    </div>
+
+    <h1><span id="redslider"></span></h1>
+
+  </body>
+</html>
